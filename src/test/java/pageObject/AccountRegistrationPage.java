@@ -25,4 +25,6 @@ public class AccountRegistrationPage extends BasePage {
     @FindBy(name="password")
     WebElement txtPassword;
 
+    @FindBy(name = "confirm")
+    WebElement txtConfirmPassword;
 }
