@@ -11,10 +11,10 @@ public class AccountRegistrationPage extends BasePage {
     }
 
     @FindBy(name = "firstname")
-    WebElement txtFirstName;
+    WebElement txtFirstname;
 
     @FindBy(name = "lastname")
-    WebElement txtLastName;
+    WebElement txtLasttname;
 
     @FindBy(name = "email")
     WebElement txtEmail;
@@ -37,5 +37,54 @@ public class AccountRegistrationPage extends BasePage {
     @FindBy(xpath = "//h1[normalize-space()='Your Account Has Been Created!']")
     WebElement msgConfirmation;
 
+    public void setFirstName(String fname) {
+        txtFirstname.sendKeys(fname);
+
+    }
+
+    public void setLastName(String lname) {
+        txtLasttname.sendKeys(lname);
+
+    }
+
+    public void setEmail(String email) {
+        txtEmail.sendKeys(email);
+
+    }
+
+    public void setTelephone(String tel) {
+        txtTelephone.sendKeys(tel);
+
+    }
+
+    public void setPassword(String pwd) {
+        txtPassword.sendKeys(pwd);
+
+    }
+
+    public void setConfirmPassword(String pwd) {
+        txtConfirmPassword.sendKeys(pwd);
+
+    }
+
+    public void setPrivacyPolicy() {
+        chkdPolicy.click();
+
+    }
+
+    public void clickContinue() {
+        //sol1
+        btnContinue.click();
+
+    }
+
+    public String getConfirmationMsg() {
+        try {
+            return (msgConfirmation.getText());
+        } catch (Exception e) {
+            return (e.getMessage());
+        }
+
+    }
 
 }
