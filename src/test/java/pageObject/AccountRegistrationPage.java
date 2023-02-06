@@ -27,4 +27,15 @@ public class AccountRegistrationPage extends BasePage {
 
     @FindBy(name = "confirm")
     WebElement txtConfirmPassword;
+
+    @FindBy(name="agree")
+    WebElement chkdPolicy;
+
+    @FindBy(xpath = "//input[@value='Continue']")
+    WebElement btnContinue;
+
+    @FindBy(xpath = "//h1[normalize-space()='Your Account Has Been Created!']")
+    WebElement msgConfirmation;
+
+
 }
