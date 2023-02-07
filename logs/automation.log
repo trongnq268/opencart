@@ -1,0 +1,4 @@
+23:52:21.442 [main] INFO  testCases.TC_001_AccountRegistrationTest - Start test TC_001_AccountRegistrationTest
+23:52:21.813 [main] INFO  testCases.TC_001_AccountRegistrationTest - Click My account
+23:52:23.004 [main] INFO  testCases.TC_001_AccountRegistrationTest - Click register link
+23:52:26.946 [main] INFO  testCases.TC_001_AccountRegistrationTest - Validating msg expect
