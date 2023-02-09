@@ -21,10 +21,12 @@ public class TC_001_AccountRegistrationTest extends BaseClass {
         hp.clickRegister();
         logger.info("Click register link");
         AccountRegistrationPage regpage = new AccountRegistrationPage(driver);
-        regpage.setFirstName("test");
-        regpage.setLastName("02");
-        regpage.setEmail("test02@gmail.com");
-        regpage.setTelephone("0974014022");
+
+        logger.info("Providing customer data");
+        regpage.setFirstName(randomeString().toUpperCase());
+        regpage.setLastName(randomeString().toUpperCase());
+        regpage.setEmail(randomeString()+"@gmail.com");
+        regpage.setTelephone(randomeNumber());
         regpage.setPassword("123456");
         regpage.setConfirmPassword("123456");
         regpage.setPrivacyPolicy();
