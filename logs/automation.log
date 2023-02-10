@@ -2,3 +2,13 @@
 23:52:21.813 [main] INFO  testCases.TC_001_AccountRegistrationTest - Click My account
 23:52:23.004 [main] INFO  testCases.TC_001_AccountRegistrationTest - Click register link
 23:52:26.946 [main] INFO  testCases.TC_001_AccountRegistrationTest - Validating msg expect
+15:07:46.671 [TestNG-tests-1] INFO  testCases.TC_001_AccountRegistrationTest - Start test TC_001_AccountRegistrationTest
+15:07:46.951 [TestNG-tests-2] INFO  testCases.TC_001_AccountRegistrationTest - Start test TC_001_AccountRegistrationTest
+15:07:51.473 [TestNG-tests-1] INFO  testCases.TC_001_AccountRegistrationTest - Click My account
+15:07:52.096 [TestNG-tests-1] INFO  testCases.TC_001_AccountRegistrationTest - Click register link
+15:07:52.113 [TestNG-tests-1] INFO  testCases.TC_001_AccountRegistrationTest - Providing customer data
+15:07:53.055 [TestNG-tests-2] INFO  testCases.TC_001_AccountRegistrationTest - Click My account
+15:07:53.643 [TestNG-tests-2] INFO  testCases.TC_001_AccountRegistrationTest - Click register link
+15:07:53.645 [TestNG-tests-2] INFO  testCases.TC_001_AccountRegistrationTest - Providing customer data
+15:07:55.627 [TestNG-tests-1] INFO  testCases.TC_001_AccountRegistrationTest - Validating msg expect
+15:07:57.055 [TestNG-tests-2] INFO  testCases.TC_001_AccountRegistrationTest - Validating msg expect
