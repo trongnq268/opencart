@@ -25,7 +25,7 @@ public class TC_001_AccountRegistrationTest extends BaseClass {
         logger.info("Providing customer data");
         regpage.setFirstName(randomeString().toUpperCase());
         regpage.setLastName(randomeString().toUpperCase());
-        regpage.setEmail(randomeString()+"@gmail.com");
+//        regpage.setEmail(randomeString()+"@gmail.com");
         regpage.setTelephone(randomeNumber());
         regpage.setPassword("123456");
         regpage.setConfirmPassword("123456");
