@@ -16,6 +16,7 @@
         <parameter name="browser" value="edge" />
         <classes>
             <class name="testCases.TC_001_AccountRegistrationTest" />
+            <class name="testCases.TC_002_LoginAccountPage" />
         </classes>
     </test>
 </suite>
