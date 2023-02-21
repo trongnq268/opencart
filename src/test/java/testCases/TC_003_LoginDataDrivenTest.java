@@ -8,10 +8,12 @@ import pageObject.HomePage;
 import pageObject.LoginPage;
 import pageObject.MyAccountPage;
 import testBase.BaseClass;
+import utilities.DataProviders;
 
 public class TC_003_LoginDataDrivenTest extends BaseClass {
 
-    @Test(dataProvider = "LoginData", dataProviderClass = DataProvider.class)
+
+    @Test(dataProvider = "LoginData", dataProviderClass = DataProviders.class)
     public void test_LoginDDT(String email, String pws, String exp){
         logger.info("***Starting TC_003_loginDataDrivenTest");
 

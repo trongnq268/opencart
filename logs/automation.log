@@ -44,3 +44,20 @@
 17:51:12.653 [TestNG-tests-1] INFO  testCases.TC_001_AccountRegistrationTest - Providing customer data
 17:51:15.525 [TestNG-tests-1] INFO  testCases.TC_001_AccountRegistrationTest - Validating msg expect
 17:51:19.019 [TestNG-tests-1] INFO  testCases.TC_002_LoginTest - ***Start test LoginTest...**
+23:03:23.619 [TestNG-tests-1] INFO  testCases.TC_001_AccountRegistrationTest - Start test TC_001_AccountRegistrationTest
+23:03:23.793 [TestNG-tests-1] INFO  testCases.TC_001_AccountRegistrationTest - Click My account
+23:03:25.104 [TestNG-tests-1] INFO  testCases.TC_001_AccountRegistrationTest - Click register link
+23:03:25.111 [TestNG-tests-1] INFO  testCases.TC_001_AccountRegistrationTest - Providing customer data
+23:03:29.929 [TestNG-tests-1] INFO  testCases.TC_001_AccountRegistrationTest - Validating msg expect
+23:03:34.463 [TestNG-tests-1] INFO  testCases.TC_002_LoginTest - ***Start test LoginTest...**
+23:03:37.170 [TestNG-tests-1] INFO  testCases.TC_002_LoginTest - Finished TC_002_LoginTest
+23:11:09.863 [TestNG-tests-1] INFO  testCases.TC_003_LoginDataDrivenTest - ***Starting TC_003_loginDataDrivenTest
+23:11:13.057 [TestNG-tests-1] INFO  testCases.TC_003_LoginDataDrivenTest - ***Starting TC_003_loginDataDrivenTest
+23:11:24.614 [TestNG-tests-1] INFO  testCases.TC_003_LoginDataDrivenTest - ***Starting TC_003_loginDataDrivenTest
+23:11:35.912 [TestNG-tests-1] INFO  testCases.TC_003_LoginDataDrivenTest - ***Starting TC_003_loginDataDrivenTest
+23:11:47.085 [TestNG-tests-1] INFO  testCases.TC_003_LoginDataDrivenTest - ***Starting TC_003_loginDataDrivenTest
+23:19:10.608 [TestNG-tests-1] INFO  testCases.TC_003_LoginDataDrivenTest - ***Starting TC_003_loginDataDrivenTest
+23:19:14.666 [TestNG-tests-1] INFO  testCases.TC_003_LoginDataDrivenTest - ***Starting TC_003_loginDataDrivenTest
+23:19:26.022 [TestNG-tests-1] INFO  testCases.TC_003_LoginDataDrivenTest - ***Starting TC_003_loginDataDrivenTest
+23:19:37.299 [TestNG-tests-1] INFO  testCases.TC_003_LoginDataDrivenTest - ***Starting TC_003_loginDataDrivenTest
+23:19:49.541 [TestNG-tests-1] INFO  testCases.TC_003_LoginDataDrivenTest - ***Starting TC_003_loginDataDrivenTest
