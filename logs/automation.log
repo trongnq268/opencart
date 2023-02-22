@@ -61,3 +61,8 @@
 23:19:26.022 [TestNG-tests-1] INFO  testCases.TC_003_LoginDataDrivenTest - ***Starting TC_003_loginDataDrivenTest
 23:19:37.299 [TestNG-tests-1] INFO  testCases.TC_003_LoginDataDrivenTest - ***Starting TC_003_loginDataDrivenTest
 23:19:49.541 [TestNG-tests-1] INFO  testCases.TC_003_LoginDataDrivenTest - ***Starting TC_003_loginDataDrivenTest
+11:39:21.006 [TestNG-tests-1] INFO  testCases.TC_001_AccountRegistrationTest - Start test TC_001_AccountRegistrationTest
+11:39:21.104 [TestNG-tests-1] INFO  testCases.TC_001_AccountRegistrationTest - Click My account
+11:39:22.080 [TestNG-tests-1] INFO  testCases.TC_001_AccountRegistrationTest - Click register link
+11:39:22.082 [TestNG-tests-1] INFO  testCases.TC_001_AccountRegistrationTest - Providing customer data
+11:39:24.949 [TestNG-tests-1] INFO  testCases.TC_001_AccountRegistrationTest - Validating msg expect

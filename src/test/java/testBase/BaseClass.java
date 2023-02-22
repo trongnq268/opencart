@@ -30,7 +30,7 @@ public class BaseClass {
 
     public ResourceBundle rb;
 
-    @BeforeClass
+    @BeforeClass(groups = { "Master", "Sanity", "Regression" })
     @Parameters("browser")
     public void setUp(String br){
 
@@ -55,7 +55,7 @@ public class BaseClass {
         driver.get(rb.getString("appUrl"));
         driver.manage().window().maximize();
     }
-    @AfterClass
+    @AfterClass(groups = { "Master", "Sanity", "Regression" })
     public void tearDown(){
         driver.close();
         driver.quit();
