@@ -32,6 +32,18 @@ public class DataProviders {
     }
 
     //DataProvider 2
+    @DataProvider(name = "TS_002")
+    public Object[][] getDataTS002() throws IOException {
+        String path = ".\\testData\\TS_002.xlsx";
+
+        ExcelUtility xlutil=new ExcelUtility(path);//creating an object for XLUtility
+
+        int totalrows=xlutil.getRowCount("Sheet1");
+        int totalcols=xlutil.getCellCount("Sheet1",1);
+
+        String logindata[][]=new String[totalrows][totalcols];//create
+        return logindata;
+    }
 
     //DataProvider 3
 
