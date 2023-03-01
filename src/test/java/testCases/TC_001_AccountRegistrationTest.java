@@ -8,7 +8,7 @@ import testBase.BaseClass;
 
 public class TC_001_AccountRegistrationTest extends BaseClass {
 
-    @Test(groups = {"Regression","Master"})
+    @Test(groups = {"Regression"})
     public void test_account_Registration(){
 
         logger.debug("Accounting test...");

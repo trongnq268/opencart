@@ -32,7 +32,7 @@ public class DataProviders {
     }
 
     //DataProvider 2
-    @DataProvider(name = "TS_002")
+    @DataProvider(name = "TC_002")
     public Object[][] getDataTS002() throws IOException {
         String path = ".\\testData\\TS_002.xlsx";
 
@@ -42,6 +42,14 @@ public class DataProviders {
         int totalcols=xlutil.getCellCount("Sheet1",1);
 
         String logindata[][]=new String[totalrows][totalcols];//create
+
+        for(int i=1;i<=totalrows;i++)  //1   //read the data from xl storing in two deminsional array
+        {
+            for(int j=0;j<totalcols;j++)  //0    i is rows j is col
+            {
+                logindata[i-1][j]= xlutil.getCellData("Sheet1",i, j);  //1,0
+            }
+        }
         return logindata;
     }
 

@@ -89,3 +89,62 @@
 17:33:13.245 [TestNG-tests-1] INFO  testCases.TC_003_LoginDataDrivenTest - ***Starting TC_003_loginDataDrivenTest
 17:33:35.668 [TestNG-tests-1] INFO  testCases.TC_003_LoginDataDrivenTest - ***Starting TC_003_loginDataDrivenTest
 17:33:58.103 [TestNG-tests-1] INFO  testCases.TC_003_LoginDataDrivenTest - ***Starting TC_003_loginDataDrivenTest
+20:58:13.947 [TestNG-tests-1] INFO  testCases.TC_003_LoginDataDrivenTest - ***Starting TC_003_loginDataDrivenTest
+20:58:16.920 [TestNG-tests-1] INFO  testCases.TC_003_LoginDataDrivenTest - ***Starting TC_003_loginDataDrivenTest
+20:58:27.887 [TestNG-tests-1] INFO  testCases.TC_003_LoginDataDrivenTest - ***Starting TC_003_loginDataDrivenTest
+20:58:38.891 [TestNG-tests-1] INFO  testCases.TC_003_LoginDataDrivenTest - ***Starting TC_003_loginDataDrivenTest
+20:58:49.771 [TestNG-tests-1] INFO  testCases.TC_003_LoginDataDrivenTest - ***Starting TC_003_loginDataDrivenTest
+21:06:33.790 [TestNG-tests-1] INFO  testCases.TC_002_LoginTest - ***Start test LoginTest...**
+21:06:35.668 [TestNG-tests-1] INFO  testCases.TC_002_LoginTest - Finished TC_002_LoginTest
+21:06:36.680 [TestNG-tests-1] INFO  testCases.TC_002_LoginTest - ***Start test TC_LF_002
+21:06:47.036 [TestNG-tests-1] INFO  testCases.TC_002_LoginTest - ***Start test TC_LF_002
+21:06:57.355 [TestNG-tests-1] INFO  testCases.TC_002_LoginTest - ***Start test TC_LF_002
+21:09:51.836 [TestNG-tests-1] INFO  testCases.TC_002_LoginTest - ***Start test LoginTest...**
+21:09:53.733 [TestNG-tests-1] INFO  testCases.TC_002_LoginTest - Finished TC_002_LoginTest
+21:12:01.487 [TestNG-tests-1] INFO  testCases.TC_002_LoginTest - ***Start test LoginTest...**
+21:12:03.706 [TestNG-tests-1] INFO  testCases.TC_002_LoginTest - Finished TC_002_LoginTest
+21:12:04.592 [TestNG-tests-1] INFO  testCases.TC_002_LoginTest - ***Start test TC_LF_002
+21:12:05.245 [TestNG-tests-1] INFO  testCases.TC_002_LoginTest - ***Start test TC_LF_002
+21:12:05.831 [TestNG-tests-1] INFO  testCases.TC_002_LoginTest - ***Start test TC_LF_002
+21:14:30.701 [TestNG-tests-1] INFO  testCases.TC_002_LoginTest - ***Start test LoginTest...**
+21:14:32.466 [TestNG-tests-1] INFO  testCases.TC_002_LoginTest - Finished TC_002_LoginTest
+21:14:33.284 [TestNG-tests-1] INFO  testCases.TC_002_LoginTest - ***Start test TC_LF_002
+21:14:33.984 [TestNG-tests-1] INFO  testCases.TC_002_LoginTest - ***Start test TC_LF_002
+21:14:34.611 [TestNG-tests-1] INFO  testCases.TC_002_LoginTest - ***Start test TC_LF_002
+21:17:33.019 [TestNG-tests-1] INFO  testCases.TC_002_LoginTest - ***Start test LoginTest...**
+21:17:34.783 [TestNG-tests-1] INFO  testCases.TC_002_LoginTest - Finished TC_002_LoginTest
+21:17:35.852 [TestNG-tests-1] INFO  testCases.TC_002_LoginTest - ***Start test TC_LF_002
+21:17:37.251 [TestNG-tests-1] INFO  testCases.TC_002_LoginTest - ***Start test TC_LF_002
+21:17:38.427 [TestNG-tests-1] INFO  testCases.TC_002_LoginTest - ***Start test TC_LF_002
+21:18:21.195 [TestNG-tests-1] INFO  testCases.TC_002_LoginTest - ***Start test LoginTest...**
+21:18:22.831 [TestNG-tests-1] INFO  testCases.TC_002_LoginTest - Finished TC_002_LoginTest
+21:18:24.058 [TestNG-tests-1] INFO  testCases.TC_002_LoginTest - ***Start test TC_LF_002
+21:18:25.041 [TestNG-tests-1] INFO  testCases.TC_002_LoginTest - Finished TC_LF_002
+21:18:25.042 [TestNG-tests-1] INFO  testCases.TC_002_LoginTest - ***Start test TC_LF_002
+21:18:25.990 [TestNG-tests-1] INFO  testCases.TC_002_LoginTest - Finished TC_LF_002
+21:18:25.992 [TestNG-tests-1] INFO  testCases.TC_002_LoginTest - ***Start test TC_LF_002
+21:18:26.980 [TestNG-tests-1] INFO  testCases.TC_002_LoginTest - Finished TC_LF_002
+22:30:22.827 [TestNG-tests-1] INFO  testCases.TC_002_LoginTest - ***Start test LoginTest...**
+22:30:25.766 [TestNG-tests-1] INFO  testCases.TC_002_LoginTest - ***Start test TC_LF_002
+22:30:26.171 [TestNG-tests-1] INFO  testCases.TC_002_LoginTest - ***Start test TC_LF_002
+22:30:26.618 [TestNG-tests-1] INFO  testCases.TC_002_LoginTest - ***Start test TC_LF_002
+22:30:26.985 [TestNG-tests-1] INFO  testCases.TC_002_LoginTest - Start TC_LF_005
+22:30:27.366 [TestNG-tests-1] INFO  testCases.TC_002_LoginTest - Start TC_LF_006
+22:31:48.738 [TestNG-tests-1] INFO  testCases.TC_002_LoginTest - ***Start test LoginTest...**
+22:31:50.825 [TestNG-tests-1] INFO  testCases.TC_002_LoginTest - Finished TC_002_LoginTest
+22:31:51.951 [TestNG-tests-1] INFO  testCases.TC_002_LoginTest - ***Start test TC_LF_002
+22:31:52.968 [TestNG-tests-1] INFO  testCases.TC_002_LoginTest - Finished TC_LF_002
+22:31:52.969 [TestNG-tests-1] INFO  testCases.TC_002_LoginTest - ***Start test TC_LF_002
+22:31:53.951 [TestNG-tests-1] INFO  testCases.TC_002_LoginTest - Finished TC_LF_002
+22:31:53.952 [TestNG-tests-1] INFO  testCases.TC_002_LoginTest - ***Start test TC_LF_002
+22:31:55.228 [TestNG-tests-1] INFO  testCases.TC_002_LoginTest - Start TC_LF_005
+22:31:55.923 [TestNG-tests-1] INFO  testCases.TC_002_LoginTest - Finished TC_LF_005
+22:31:55.926 [TestNG-tests-1] INFO  testCases.TC_002_LoginTest - Start TC_LF_006
+22:58:43.974 [TestNG-tests-1] INFO  testCases.TC_001_AccountRegistrationTest - Start test TC_001_AccountRegistrationTest
+22:58:44.123 [TestNG-tests-1] INFO  testCases.TC_001_AccountRegistrationTest - Click My account
+22:58:45.145 [TestNG-tests-1] INFO  testCases.TC_001_AccountRegistrationTest - Click register link
+22:58:45.154 [TestNG-tests-1] INFO  testCases.TC_001_AccountRegistrationTest - Providing customer data
+22:58:48.654 [TestNG-tests-1] INFO  testCases.TC_001_AccountRegistrationTest - Validating msg expect
+22:58:54.469 [TestNG-tests-1] INFO  testCases.TC_002_LoginTest - Start TC_LF_008
+23:17:18.055 [TestNG-tests-1] INFO  testCases.TC_002_LoginTest - Start TC_LF_008
+23:17:18.988 [TestNG-tests-1] INFO  testCases.TC_002_LoginTest - Finished TC_LF_008

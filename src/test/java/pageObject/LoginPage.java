@@ -22,12 +22,31 @@ public class LoginPage extends BasePage{
     @FindBy(xpath = "//div[@class='alert alert-danger alert-dismissible']")
     WebElement msgAlert;
 
+    @FindBy(xpath = "//div[@class='form-group']//a[normalize-space()='Forgotten Password']")
+    WebElement btnForgotPassword;
+
     public void setEmail(String email){
         txtEmail.sendKeys(email);
     }
 
+    public String getTextEmail(){
+       try{
+           return (txtEmail.getAttribute("placeholder"));
+       }catch (Exception e){
+           return (e.getMessage());
+       }
+    }
+
     public void setPassword(String password){
         txtPassword.sendKeys(password);
+    }
+
+    public String getTextPassword(){
+        try {
+            return(txtPassword.getAttribute("placeholder"));
+        }catch(Exception e){
+            return(e.getMessage());
+        }
     }
 
     public void clickLogin(){
@@ -48,5 +67,9 @@ public class LoginPage extends BasePage{
         }catch (Exception e){
            return (false);
         }
+    }
+
+    public void clickForgotPassword(){
+        btnForgotPassword.click();
     }
 }
