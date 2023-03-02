@@ -15,7 +15,7 @@ public class TC_002_LoginTest extends BaseClass {
     HomePage homePage = new HomePage();
     LoginPage lp = new LoginPage();
     ForgotPaswordPage fgp =new ForgotPaswordPage();
-
+    MyAccountPage macc = new MyAccountPage();
     @Test(groups = {"Sanity"}, priority = 1)
     public void TC_LF_007() {
 
@@ -28,11 +28,11 @@ public class TC_002_LoginTest extends BaseClass {
             lp.setPassword(driver,rb.getString("password"));
             lp.clickLogin(driver);
 
-            MyAccountPage macc = new MyAccountPage(driver);
-            boolean targetpage = macc.isMyAccountPageExits();
-            Assert.assertEquals(targetpage, true);
 
-            macc.clickLogout();
+            boolean targetpage = macc.isMyAccountPageExits(driver);
+            Assert.assertTrue(targetpage);
+
+            macc.clickLogout(driver);
         }
         catch (Exception e){
             e.printStackTrace();
@@ -120,7 +120,7 @@ public class TC_002_LoginTest extends BaseClass {
         logger.info("Finished TC_LF_008");
     }
 
-    @Test(priority = 6, groups = "Master")
+    @Test(priority = 6)
     public void TC_LF_009(){
         try{
             homePage.clickMyAccount(driver);
@@ -129,18 +129,62 @@ public class TC_002_LoginTest extends BaseClass {
             lp.setEmail(driver,rb.getString("email"));
             lp.setPassword(driver,rb.getString("password"));
             lp.clickLogin(driver);
-
             lp.backPage(driver);
 
-            MyAccountPage macc = new MyAccountPage(driver);
-            boolean targetpage = macc.isMyAccountPageExits();
-            Assert.assertEquals(targetpage, true);
+            boolean targetpage = macc.isMyAccountPageExits(driver);
+            Assert.assertTrue(targetpage);
 
-            macc.clickLogout();
+            macc.clickLogout(driver);
 
 
         }catch (Exception e){
             e.printStackTrace();
+            Assert.fail();
+        }
+    }
+
+    @Test(priority =  7)
+    public void TC_LF_010(){
+        try{
+            homePage.clickMyAccount(driver);
+            homePage.clickLogin(driver);
+
+            lp.setEmail(driver,rb.getString("email"));
+            lp.setPassword(driver,rb.getString("password"));
+            lp.clickLogin(driver);
+
+            macc.clickLogout(driver);
+
+            lp.backPage(driver);
+
+            boolean targetpage = macc.isMyAccountPageExits(driver);
+            Assert.assertTrue(targetpage);
+
+        }catch (Exception e){
+            e.printStackTrace();
+            Assert.fail();
+        }
+    }
+
+    @Test(priority = 8, groups = "Master")
+    public void TC_LF_012(){
+        try {
+            homePage.clickMyAccount(driver);
+            homePage.clickLogin(driver);
+
+            lp.setEmail(driver, rb.getString("emailFail"));
+            lp.setPassword(driver, rb.getString("passwordFail"));
+
+            for(int i = 0; i <= 6; i++){
+                lp.clickLogin(driver);
+            }
+
+            String actual = lp.msgLoginFail(driver);
+            String expected  = "Warning: Your account has exceeded allowed number of login attempts. Please try again in 1 hour.";
+
+            Assert.assertEquals(expected, actual);
+        }catch (Exception e){
+            e.getStackTrace();
             Assert.fail();
         }
     }

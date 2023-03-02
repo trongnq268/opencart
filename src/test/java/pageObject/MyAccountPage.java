@@ -1,30 +1,27 @@
 package pageObject;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class MyAccountPage extends BasePage{
+public class MyAccountPage{
 
-    public MyAccountPage(WebDriver driver) {
-        super(driver);
-    }
+    String msgHeadingXpath = "//h2[text()='My Account']";
+    String logoutXpath = "//div[@class='list-group']//a[text()='Logout']";
 
-    @FindBy(xpath = "//h2[text()='My Account']")
-    WebElement msgHeading;
 
-    @FindBy(xpath = "//div[@class='list-group']//a[text()='Logout']")
-    WebElement lnkLogout;
-
-    public boolean isMyAccountPageExits(){
+    public boolean isMyAccountPageExits(WebDriver driver){
         try{
+            WebElement msgHeading = driver.findElement(By.xpath(msgHeadingXpath));
             return (msgHeading.isDisplayed());
         }catch (Exception e){
             return (false);
         }
     }
 
-    public void clickLogout(){
+    public void clickLogout(WebDriver driver){
+        WebElement lnkLogout = driver.findElement(By.xpath(logoutXpath));
         lnkLogout.click();
     }
 }

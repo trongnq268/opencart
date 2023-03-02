@@ -11,7 +11,7 @@ import testBase.BaseClass;
 import utilities.DataProviders;
 
 public class TC_003_LoginDataDrivenTest extends BaseClass {
-
+    MyAccountPage macc = new MyAccountPage();
     @Test(dataProvider = "LoginData", dataProviderClass = DataProviders.class)
     public void test_LoginDDT(String email, String pws, String exp){
         logger.info("***Starting TC_003_loginDataDrivenTest");
@@ -26,12 +26,12 @@ public class TC_003_LoginDataDrivenTest extends BaseClass {
             loginPage.setPassword(driver,pws);
             loginPage.clickLogin(driver);
 
-            MyAccountPage macc = new MyAccountPage(driver);
-            boolean targetpage = macc.isMyAccountPageExits();
+
+            boolean targetpage = macc.isMyAccountPageExits(driver);
 
             if(exp.equals("Valid")){
                 if (targetpage == true){
-                    macc.clickLogout();
+                    macc.clickLogout(driver);
                     Assert.assertTrue(true);
                 }
                 else {
@@ -40,7 +40,7 @@ public class TC_003_LoginDataDrivenTest extends BaseClass {
             }
             if (exp.equals("Invalid")){
                 if (targetpage == true){
-                    macc.clickLogout();
+                    macc.clickLogout(driver);
                     Assert.assertTrue(false);
                 }
                 else {
@@ -49,6 +49,7 @@ public class TC_003_LoginDataDrivenTest extends BaseClass {
             }
 
         }catch (Exception e){
+            e.getStackTrace();
             Assert.fail();
         }
     }
