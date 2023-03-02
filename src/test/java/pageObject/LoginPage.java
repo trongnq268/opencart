@@ -1,75 +1,79 @@
 package pageObject;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class LoginPage extends BasePage{
+public class LoginPage{
+//
+//    public LoginPage(WebDriver driver){
+//        super(driver);
+//    }
 
-    public LoginPage(WebDriver driver){
-        super(driver);
-    }
+    String emailXpath = "//input[@id='input-email']";
+    String passwordXpath = "//input[@id='input-password']";
+    String btnLoginXpath =  "//input[@value='Login']";
+    String msgAlertXpath = "//div[@class='alert alert-danger alert-dismissible']";
+    String btnForgotPasswordXpath = "//div[@class='form-group']//a[normalize-space()='Forgotten Password']";
 
-    @FindBy(xpath = "//input[@id='input-email']")
-    WebElement txtEmail;
-
-    @FindBy(xpath = "//input[@id='input-password']")
-    WebElement txtPassword;
-
-    @FindBy(xpath = "//input[@value='Login']")
-    WebElement btnLogin;
-
-    @FindBy(xpath = "//div[@class='alert alert-danger alert-dismissible']")
-    WebElement msgAlert;
-
-    @FindBy(xpath = "//div[@class='form-group']//a[normalize-space()='Forgotten Password']")
-    WebElement btnForgotPassword;
-
-    public void setEmail(String email){
+    public void setEmail(WebDriver driver,String email){
+        WebElement txtEmail = driver.findElement(By.xpath(emailXpath));
         txtEmail.sendKeys(email);
     }
 
-    public String getTextEmail(){
+    public String getTextEmail(WebDriver driver){
        try{
+           WebElement txtEmail = driver.findElement(By.xpath(emailXpath));
            return (txtEmail.getAttribute("placeholder"));
        }catch (Exception e){
            return (e.getMessage());
        }
     }
 
-    public void setPassword(String password){
+    public void setPassword(WebDriver driver,String password){
+        WebElement txtPassword = driver.findElement(By.xpath(passwordXpath));
         txtPassword.sendKeys(password);
     }
 
-    public String getTextPassword(){
+    public String getTextPassword(WebDriver driver){
         try {
+            WebElement txtPassword = driver.findElement(By.xpath(passwordXpath));
             return(txtPassword.getAttribute("placeholder"));
         }catch(Exception e){
             return(e.getMessage());
         }
     }
 
-    public void clickLogin(){
+    public void clickLogin(WebDriver driver){
+        WebElement btnLogin = driver.findElement(By.xpath(btnLoginXpath));
         btnLogin.click();
     }
 
-    public String msgLoginFail(){
+    public String msgLoginFail(WebDriver driver){
         try{
+            WebElement msgAlert = driver.findElement(By.xpath(msgAlertXpath));
             return(msgAlert.getText());
         }catch (Exception e){
             return (e.getMessage());
         }
     }
 
-    public boolean isMsgAlert(){
+    public boolean isMsgAlert(WebDriver driver){
         try{
+            WebElement msgAlert = driver.findElement(By.xpath(msgAlertXpath));
             return msgAlert.isDisplayed();
         }catch (Exception e){
            return (false);
         }
     }
 
-    public void clickForgotPassword(){
+    public void clickForgotPassword(WebDriver driver){
+        WebElement btnForgotPassword = driver.findElement(By.xpath(btnForgotPasswordXpath));
         btnForgotPassword.click();
+    }
+
+    public void backPage(WebDriver driver){
+        driver.navigate().back();
     }
 }

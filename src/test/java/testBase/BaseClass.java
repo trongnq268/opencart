@@ -22,7 +22,7 @@ import java.time.Duration;
 import java.util.Date;
 import java.util.ResourceBundle;
 
-public class BaseClass {
+public class BaseClass{
 
     public static WebDriver driver;
 
@@ -55,6 +55,7 @@ public class BaseClass {
         driver.get(rb.getString("appUrl"));
         driver.manage().window().maximize();
     }
+
     @AfterClass(groups = { "Master", "Sanity", "Regression" })
     public void tearDown(){
         driver.close();

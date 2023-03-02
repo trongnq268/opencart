@@ -12,19 +12,21 @@ import utilities.DataProviders;
 
 public class TC_002_LoginTest extends BaseClass {
 
+    HomePage homePage = new HomePage();
+    LoginPage lp = new LoginPage();
+    ForgotPaswordPage fgp =new ForgotPaswordPage();
+
     @Test(groups = {"Sanity"}, priority = 1)
     public void TC_LF_007() {
 
         logger.info("***Start test LoginTest...**");
         try {
+            homePage.clickMyAccount(driver);
+            homePage.clickLogin(driver);
 
-            HomePage homePage = new HomePage(driver);
-            homePage.clickMyAccount();
-            homePage.clickLogin();
-            LoginPage lp = new LoginPage(driver);
-            lp.setEmail(rb.getString("email"));
-            lp.setPassword(rb.getString("password"));
-            lp.clickLogin();
+            lp.setEmail(driver,rb.getString("email"));
+            lp.setPassword(driver,rb.getString("password"));
+            lp.clickLogin(driver);
 
             MyAccountPage macc = new MyAccountPage(driver);
             boolean targetpage = macc.isMyAccountPageExits();
@@ -33,6 +35,7 @@ public class TC_002_LoginTest extends BaseClass {
             macc.clickLogout();
         }
         catch (Exception e){
+            e.printStackTrace();
             Assert.fail();
         }
         logger.info("Finished TC_002_LoginTest");
@@ -42,17 +45,17 @@ public class TC_002_LoginTest extends BaseClass {
     public void TC_LF_002(String email, String pws){
         logger.info("***Start test TC_LF_002");
         try{
-            HomePage homePage = new HomePage(driver);
-            LoginPage lp = new LoginPage(driver);
+//            HomePage homePage = new HomePage(driver);
+//            LoginPage lp = new LoginPage(driver);
 
-            homePage.clickMyAccount();
-            homePage.clickLogin();
-            lp.setEmail(email);
-            lp.setPassword(pws);
-            lp.clickLogin();
+            homePage.clickMyAccount(driver);
+            homePage.clickLogin(driver);
+            lp.setEmail(driver,email);
+            lp.setPassword(driver,pws);
+            lp.clickLogin(driver);
 
-            Assert.assertTrue(lp.isMsgAlert(), "It is Alert");
-            String actualAlert = lp.msgLoginFail();
+            Assert.assertTrue(lp.isMsgAlert(driver), "It is Alert");
+            String actualAlert = lp.msgLoginFail(driver);
             String expectAlert = "Warning: No match for E-Mail Address and/or Password.";
             Assert.assertEquals(actualAlert,expectAlert,"It is pass");
 
@@ -66,17 +69,16 @@ public class TC_002_LoginTest extends BaseClass {
     public void TC_LF_005(){
         logger.info("Start TC_LF_005");
         try{
-            HomePage homePage = new HomePage(driver);
-            homePage.clickMyAccount();
-            homePage.clickLogin();
+            homePage.clickMyAccount(driver);
+            homePage.clickLogin(driver);
 
-            LoginPage lp = new LoginPage(driver);
-            lp.clickLogin();
-            String actualAlert = lp.msgLoginFail();
+            lp.clickLogin(driver);
+            String actualAlert = lp.msgLoginFail(driver);
             String expectAlert = "Warning: No match for E-Mail Address and/or Password.";
 
             Assert.assertEquals(actualAlert,expectAlert,"It is pass");
         }catch (Exception e){
+            e.printStackTrace();
             Assert.fail();
         }
         logger.info("Finished TC_LF_005");
@@ -86,40 +88,61 @@ public class TC_002_LoginTest extends BaseClass {
     public void TC_LF_006(){
         logger.info("Start TC_LF_006");
         try{
-            HomePage homePage = new HomePage(driver);
-            homePage.clickMyAccount();
-            homePage.clickLogin();
-            LoginPage lp = new LoginPage(driver);
-            lp.clickForgotPassword();
-            ForgotPaswordPage fgp =new ForgotPaswordPage(driver);
+            homePage.clickMyAccount(driver);
+            homePage.clickLogin(driver);
+            lp.clickForgotPassword(driver);
 
-            Assert.assertTrue(fgp.isForgotPasswordPage(), "Forgot Your Password page");
+            Assert.assertTrue(fgp.isForgotPasswordPage(driver), "Forgot Your Password page");
         }catch (Exception e){
             Assert.fail();
         }
     }
 
-    @Test(priority = 5, groups = "Master")
+    @Test(priority = 5)
     public void TC_LF_008(){
         logger.info("Start TC_LF_008");
         try{
-            HomePage homePage = new HomePage(driver);
-            homePage.clickMyAccount();
-            homePage.clickLogin();
+            homePage.clickMyAccount(driver);
+            homePage.clickLogin(driver);
 
-            LoginPage lp = new LoginPage(driver);
-            String actualEmail = lp.getTextEmail();
+            String actualEmail = lp.getTextEmail(driver);
             String expectedEmail = "E-Mail Address";
             Assert.assertEquals(actualEmail, expectedEmail, "Fail Email");
 
-            String actualPassword = lp.getTextPassword();
+            String actualPassword = lp.getTextPassword(driver);
             String expectedPassword = "Password";
             Assert.assertEquals(actualPassword, expectedPassword, "Fail password");
 
         } catch (Exception e) {
+            e.printStackTrace();
             Assert.fail();
         }
         logger.info("Finished TC_LF_008");
+    }
+
+    @Test(priority = 6, groups = "Master")
+    public void TC_LF_009(){
+        try{
+            homePage.clickMyAccount(driver);
+            homePage.clickLogin(driver);
+
+            lp.setEmail(driver,rb.getString("email"));
+            lp.setPassword(driver,rb.getString("password"));
+            lp.clickLogin(driver);
+
+            lp.backPage(driver);
+
+            MyAccountPage macc = new MyAccountPage(driver);
+            boolean targetpage = macc.isMyAccountPageExits();
+            Assert.assertEquals(targetpage, true);
+
+            macc.clickLogout();
+
+
+        }catch (Exception e){
+            e.printStackTrace();
+            Assert.fail();
+        }
     }
 
 }

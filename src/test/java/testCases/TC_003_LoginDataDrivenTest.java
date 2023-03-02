@@ -17,14 +17,14 @@ public class TC_003_LoginDataDrivenTest extends BaseClass {
         logger.info("***Starting TC_003_loginDataDrivenTest");
 
         try{
-            HomePage homePage = new HomePage(driver);
-            homePage.clickMyAccount();
-            homePage.clickLogin();
+            HomePage homePage = new HomePage();
+            homePage.clickMyAccount(driver);
+            homePage.clickLogin(driver);
 
-            LoginPage loginPage  = new LoginPage(driver);
-            loginPage.setEmail(email);
-            loginPage.setPassword(pws);
-            loginPage.clickLogin();
+            LoginPage loginPage  = new LoginPage();
+            loginPage.setEmail(driver,email);
+            loginPage.setPassword(driver,pws);
+            loginPage.clickLogin(driver);
 
             MyAccountPage macc = new MyAccountPage(driver);
             boolean targetpage = macc.isMyAccountPageExits();

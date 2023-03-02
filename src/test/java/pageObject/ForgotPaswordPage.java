@@ -1,20 +1,18 @@
 package pageObject;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class ForgotPaswordPage extends BasePage {
+public class ForgotPaswordPage {
 
-    public ForgotPaswordPage (WebDriver driver) {
-        super(driver);
-    }
+    String txtForgotPasswordPageXpath = "//h1[normalize-space()='Forgot Your Password?']";
 
-    @FindBy(xpath = "//h1[normalize-space()='Forgot Your Password?']")
-    WebElement txtForgotPasswordPage;
 
-    public boolean isForgotPasswordPage(){
+    public boolean isForgotPasswordPage(WebDriver driver){
         try {
+            WebElement txtForgotPasswordPage = driver.findElement(By.xpath(txtForgotPasswordPageXpath));
             return (txtForgotPasswordPage.isDisplayed());
         }
         catch (Exception e) {
