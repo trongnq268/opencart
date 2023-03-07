@@ -166,7 +166,7 @@ public class TC_002_LoginTest extends BaseClass {
         }
     }
 
-    @Test(priority = 8, groups = "Master")
+    @Test(priority = 8)
     public void TC_LF_012(){
         try {
             homePage.clickMyAccount(driver);
