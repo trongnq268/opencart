@@ -3,7 +3,9 @@ package pageObject;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
+import org.testng.Assert;
+
+import java.util.List;
 
 public class HomePage{
 
@@ -20,6 +22,10 @@ public class HomePage{
     String btnSearchXpath = "//button[@class='btn btn-default btn-lg']";
 
     String searchDataXpath = "//a[normalize-space()='iMac']";
+
+    String StringSearchNoDataXpath = "//div[@id='content']//p[2]";
+
+    String listProductSearchCss = ".product-layout";
     //Action Methods
     public void clickMyAccount(WebDriver driver){
         WebElement lnkMyAccount = driver.findElement(By.xpath(lnkMyAccountXpath));
@@ -61,6 +67,24 @@ public class HomePage{
             return (isSearchData.isDisplayed());
         }catch (Exception e){
             return (false);
+        }
+    }
+
+    public String getTextSearchNoData(WebDriver driver){
+        try {
+            WebElement textSearchNoData = driver.findElement(By.xpath(StringSearchNoDataXpath));
+            return textSearchNoData.getText();
+        }catch (Exception e){
+           return (e.getMessage());
+        }
+    }
+
+    public int productLayout(WebDriver driver){
+        try {
+            List<WebElement> productList = driver.findElements(By.cssSelector(listProductSearchCss));
+            return productList.size();
+        }catch (Exception e) {
+            return 0;
         }
     }
 }

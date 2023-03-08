@@ -31,7 +31,38 @@ public class TC_005_Search extends BaseClass {
             homePage.inputSearch(driver, rb.getString("searchNoData"));
             homePage.btnSearch(driver);
 
-            
+            String expectTextSearchNoData = "There is no product that matches the search criteria";
+            String actualTextSearchNoData = homePage.getTextSearchNoData(driver);
+            Assert.assertEquals(expectTextSearchNoData, actualTextSearchNoData);
+
+        }catch (Exception e){
+            e.getStackTrace();
+            Assert.fail();
+        }
+    }
+
+    @Test
+    public void TC_SF_003(){
+        try{
+            homePage.btnSearch(driver);
+
+            String expectTextSearchNoData = "There is no product that matches the search criteria";
+            String actualTextSearchNoData = homePage.getTextSearchNoData(driver);
+            Assert.assertEquals(expectTextSearchNoData, actualTextSearchNoData);
+
+        }catch(Exception e){
+            e.getStackTrace();
+            Assert.fail();
+        }
+    }
+
+    @Test
+    public void TC_SF_005(){
+        try{
+            homePage.inputSearch(driver,rb.getString("searchListProducts"));
+            homePage.btnSearch(driver);
+
+
         }catch (Exception e){
             e.getStackTrace();
             Assert.fail();
