@@ -8,6 +8,7 @@ public class SearchPage {
 
     String inputSearchXpath = "//input[@id='input-search']";
     String selectCategorySearchXpath = "//select[@name='category_id']";
+    String btnSearchXpath = "//input[@id='button-search']";
 
     public boolean isInputSearch(WebDriver driver){
         try {
@@ -25,5 +26,15 @@ public class SearchPage {
         }catch (Exception e){
             return(false);
         }
+    }
+
+    public void inputSearch(WebDriver driver, String productName){
+        WebElement inputSearch = driver.findElement(By.xpath(inputSearchXpath));
+        inputSearch.sendKeys(productName);
+    }
+
+    public void clickBtnSearch(WebDriver driver){
+        WebElement btnSearch = driver.findElement(By.xpath(btnSearchXpath));
+        btnSearch.click();
     }
 }
