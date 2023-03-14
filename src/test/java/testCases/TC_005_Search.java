@@ -104,6 +104,22 @@ public class TC_005_Search extends BaseClass {
         }
     }
 
+    @Test
+    public void TC_SF_008(){
+        try{
+            homePage.btnSearch(driver);
+
+            searchPage.inputSearch(driver, "iLife");
+            searchPage.clickCheckbox(driver);
+            searchPage.clickBtnSearch(driver);
 
 
+        }catch (Exception e){
+            e.getStackTrace();
+            Assert.fail();
+        }
+    }
+
+
+    
 }
